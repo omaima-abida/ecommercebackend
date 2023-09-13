@@ -9,6 +9,7 @@ const app = express();
 const categorieRouter =require("./routes/categorie.route")
 const scategorieRouter =require("./routes/scategorie.route")
 const articleRouter =require("./routes/article.route")
+const userRouter=require("./routes/user.route")
 //BodyParser Middleware
 
 
@@ -35,6 +36,7 @@ res.send("bonjour");
 app.use('/api/categories', categorieRouter);
 app.use('/api/scategories', scategorieRouter);
 app.use('/api/articles', articleRouter);
+app.use('/api/users', userRouter );
 
 //Route Stripe
 app.use('/api/payment', paymentRouter);
